@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "learning-directives": {
+    "learning-databinding": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/learning-directives",
+            "outputPath": "dist/learning-databinding",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -62,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "learning-directives:build"
+            "browserTarget": "learning-databinding:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "learning-directives:build:production"
+              "browserTarget": "learning-databinding:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "learning-directives:build"
+            "browserTarget": "learning-databinding:build"
           }
         },
         "test": {
@@ -88,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -110,15 +112,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "learning-directives:serve"
+            "devServerTarget": "learning-databinding:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "learning-directives:serve:production"
+              "devServerTarget": "learning-databinding:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "learning-directives"
+  "defaultProject": "learning-databinding"
 }
